@@ -16,7 +16,7 @@ basemap.addTo(map);
 
 
 // Make a request that retrieves the earthquake geoJSON data.
-d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson").then(function (data) {
+d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function (data) {
 
   // This function returns the style data for each of the earthquakes we plot on
   // the map. Pass the magnitude and depth of the earthquake into two separate functions
@@ -97,7 +97,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_w
     ];
   
     // Initialize depth intervals and colors for the legend
-     // var depth = [-10, 10, 30, 50, 70, 90];
+      
 
     // Loop through our depth intervals to generate a label with a colored square for each interval.
     for (var i = 0; i < depth.length; i++) {
